@@ -21,6 +21,8 @@ spotify.attach(Alicia)
 
 print(spotify.observers)
 
+spotify.notify("TESSSSTTTT")
+
 
 #TODO Revisar notify
 #TODO Cambiar sistema de pago para tomar en cuenta la cuenta de los meses

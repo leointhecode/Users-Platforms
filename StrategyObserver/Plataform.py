@@ -46,23 +46,27 @@ class Subject:
         self.exObserver = []
 
     def attach(self, observer):
-        self.observers.append(observer)
 
+        self.observers.append(observer)
+        
         if observer in self.exObserver:
+
             print(f"Bienvenido de vuelta {observer.name}")
+
         else:
-            print(f"Hello {self.observers[-1].name}")
-        
-        
+
+            print(f"Hello {self.observers[-1].name}")     
 
     def detach(self, observer):
+
         self.observers.remove(observer)
         self.exObserver.append(observer)
         print(f"Lamentamos que nos dejes {observer.name}")
 
-    def notify(self):
+    def notify(self, message):
         for observer in self.observers:
-            observer.update(self)
+            observer.update(self, observer.name     , message)
+
 
 
 

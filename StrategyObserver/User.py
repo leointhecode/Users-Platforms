@@ -1,5 +1,5 @@
 class Observer:
-    def update(self, subject):
+    def update(self, name, message):
         pass
 
 class User(Observer):
@@ -11,8 +11,8 @@ class User(Observer):
     # def update(self, subject):
     #    return super().update(subject)
     
-    def update(self, subject):
-        print(f"Welcome to {subject.name}, {self.name}")
+    def update(self, name , message):
+        print(f"test {name}, {message}")
 
     def get_money(self):
         return self.money
